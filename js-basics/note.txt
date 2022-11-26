@@ -1,0 +1,167 @@
+Comment:
+
+    var number = 5; // in-line comment
+
+    /*multiple line comment */
+
+Data Types:
+    undefined, null, boolean, string, symbol, number, and object
+
+    //very similar to c++
+
+    var myName = "Beau"
+    myName = 8
+
+    let ourName = "freeCodeCamp"
+    
+    const pi = 3.1419
+
+    /*; is not required as syntax but useful to know where a line of code ends*/
+
+    var a;
+    var b=2;
+    a=7;
+    b=a;
+    console.log(a); // print function
+
+    var declaration are case sensitive in js so use camel case to seperate words for tour ease
+
+    myVar++;// works
+    myVar--;
+    a += 10 // also works
+    a -= 10 //
+    a *= 10 //
+    a /= 10 //
+
+    var firstName = "Alan"; // declaring string
+    var myStr = "I am \"double quoted\" string in \"double quotes\""
+    // another method of using double and single quote inside a string is using single quote " ' " or backticks " ` "
+    // ' and ` can aslo be used to quote a string
+
+CODE OUTPUT
+    \' single quote
+    \" double quote
+    \\ backslash
+    \n new line
+    \r carriage return
+    \t tab
+    \b backspace
+    \form feed
+
+String:
+    myName = " " + " "
+    myName += " " 
+    console.log(myFirstName + myLastName);
+    var myName = "lol"
+    var middle = "name"
+    myName += " "+middle+" "+"404"
+    console.log(myName)
+    // to print a variable with other data rather than string use JSON.stringify(variable_name)
+
+ Length of string
+    var lengthString = 0;
+    var string = "string";
+    lengthString = string.length;
+    console.log(lengthString)
+
+Bracket Notation in String
+    var FirstName = "HumbleGod";
+    FirstName = "MumbleGod";
+    console.log(FirstName)
+    console.log(FirstName[0])
+
+    to find the last letter in a string use length of string - 1 TECHNIQUE
+
+Arrys
+    var array['John", 3];
+    var array1[ [1,2,3],[4,5,6],[7,8,9]]
+    array.push(["happy","joy"])
+    array.pop()
+        when pushing a pulling to multidimensional array index of bigger array is taken in consideration in push and pop function
+    shift is pop at beginning
+    unshift is pushing at beginning
+
+Function
+    Syntax:
+        function functionName(parameter)
+        {
+            console.log("hello world")
+        }
+        functionName();
+
+Global and local variable
+when a variable is declared within a function with no var or let then it automatically becomes global 
+
+    var outerWear = "T-shirt";// global function
+    function myOutift()
+    {
+        var outerWear = "Sweater";//  local function
+        return outerWear;// local functoin takes priority over the global when both ahve same variableName
+    }
+
+    console.log(myOutfit());
+    console/log(outerWear);
+
+If Statement
+    Syntax:
+        if(isTrue)
+        {
+            argument ....;
+        }
+        else if()
+        {
+            argument ...;
+        }
+        else
+        {
+            argument...;
+        }
+
+    Note:
+        /*  3 == 3 True // equality
+            3 == '3' True
+        but
+            3 === 3 True // strict equality
+            3 === '3' False */
+        For inequality
+        /*  3 != 3 True // inequality
+            3 != '3' True
+        but
+            3 !== 3 True // strict inequality
+            3 !== '3' False */
+
+Switch
+    function caseInSwitch(val) {
+    var answer = ""$
+    switch(val) {
+    case 1:
+        answer = "alpha";
+        break;
+    case 2:
+        answer = "beta";
+        break;
+    case 3:
+        answer = "gamma";
+        break;
+    case 4:
+        answer = "delta";
+        break;
+
+    Note:
+        to select multiple case statement or to have same answer in multiple case
+        switch(val) {
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+            answer = "delta";
+            break;
+        } 
+
+Object
+var ourDog = {
+"name": "Khaire",
+"Legs": 4,
+"tails": 1,
+"friends": ["everything!"];
+};
