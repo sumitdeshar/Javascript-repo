@@ -158,10 +158,46 @@ Switch
             break;
         } 
 
-Object
-var ourDog = {
-"name": "Khaire",
-"Legs": 4,
-"tails": 1,
-"friends": ["everything!"];
-};
+Object 
+//key in python
+    var ourDog = {
+    "name": "Khaire",
+    "Legs": 4,
+    "tails": 1,
+    "friends": ["everything!"]
+    };
+
+Accessing Object Properties with Dot Notation
+    var nameValue = ourDog.name;
+    var legsValue = ourDog.Legs; 
+
+Accessing Object Properties using bracket Notation
+    //same setup
+    var nameValue = ourDog["name"];
+    var legsValue = ourDog['Legs'];
+
+    //new code
+    var testObj = {
+        16: "Montana",
+        19: "Unitas"
+    };
+
+    var playerNumber = 16;
+    var player = testObj[playerNumber];// using variable_name
+
+Adding Object Properties
+    //same setup
+    ourDog.bark = "bow-how"
+    OR
+    ourDog['bark'] = 'hwoof'
+
+Deleting Object Properties
+    //continue setup
+    delete ourDog.bark;
+    OR
+    delete.ourDog['bark']
+
+Checking Object Properties
+
+myObj.hasOwnProperty(checkProp) // returns true or false
+
