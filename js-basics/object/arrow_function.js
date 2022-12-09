@@ -47,4 +47,3 @@ console.log(squaredIntegers)
     })();
         console. log(increment(5, 2));
         console. Log(increment(5));
-        

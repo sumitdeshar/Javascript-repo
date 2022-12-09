@@ -12,7 +12,7 @@ Data Types:
     var myName = "Beau"
     myName = 8
 
-    let ourName = "freeCodeCamp"
+    let ourName = "freeCodeCamp"; // Line no 273 for descriptive info
     
     const pi = 3.1419
 
@@ -201,3 +201,147 @@ Checking Object Properties
 
 myObj.hasOwnProperty(checkProp) // returns true or false
 
+Loops:
+While loop:
+Syntax:
+    while(i<5){
+        arg
+    }
+
+For loop:
+Syntax:
+    for (var i = 0; i<5;i++)
+    {
+        arg
+    }
+Example:
+    var ourArr = [9,10,11,12]
+    var ourTotal = 0;
+    for (var i=0; i<ourArr.length; i++)
+        {
+            ourTotal += ourArr[i]
+        }
+
+Nexted For loop:
+    function multiplyAll(arr)
+    {
+        var product = 1;
+
+        for (var i=0; i < arr.length; i++)
+        {
+            for (var j=0; j<arr[i].length; j++)
+            {
+                product *= arr[i][j];
+            }
+        }
+        return product;
+    }
+
+    var product = multiplyAll([[1,2],[3,4],[5,6,7]]);
+
+    console. log(product) ;
+
+Do while loop:
+    Its used in same senerio as while loop but the code gets to run atleast one time before conditon is checked
+Syntax:
+do{
+    argument
+}while(condition)
+
+Creating random number
+- Math.random(); give a random fractional number between 0 and 1 
+- Math.floor(Math.random()*20); give a whole number between 0 t0 19
+
+function ourRandomRange(ourMin, ourMax){
+
+    return Math.floor(Math.random() * (ourMax - ourMin + 1)) + ourMin;
+}
+
+-Creating a string to interger
+    parseInt(str, base)//"56"->56
+    //default base is at 10 
+
+-Ternary poerator
+    //condition ? statement-if-true : statement-if-false;
+Example:
+    function checkEqual(a, b) {
+        return a === b ? true : false;
+        //but return a === b ; also means same for this case
+//function checkSign(num) {
+    return num > 0 ? "positive" : num < 0 ? "negative" : "zero";
+    }
+
+Data types:
+let:(Different between let and var)
+    -doesnot allow a variable to be declared with same varible_name
+    Example:
+
+    function checkscope(){
+        let i = "function scope";
+        if (true) {
+            let i = "block scope";              // i is declared locally which cannot be accessed outside the block
+                                                // when declared with var which can be accessed outside the block locally
+            console. log("Block scope i is: ", i);
+        }
+        console. log("Function scope i is: ", i);
+        return i;
+    }
+
+const:
+    It is read-only variable cannot even be appended
+    use a capital variable_name declaration to remember that it is a const variable
+
+-Mutate(change) a array declared in const
+    const s = [5, 7, 2];
+    function editInPlace() {
+        "use strict";
+
+        //s= [2,5,7] is not possible hence when done by bracket notation it is possible
+        s[0] = 2;
+        s[1] = 5;
+        s[2] = 7;
+        }
+
+-Object data mutation
+    function freezeObj() {
+        "use strict"
+        const MATH_CONSTANTS ={
+            PI:3.121529
+        };
+        Oject.freeze(MATH_CONSTANTS);
+        try{
+            MATH_CONSTANTS.PI = 99;
+        } 
+        catch( ex ) {
+            console. log(ex) ;
+        }
+        return MATH_CONSTANTS.PI;
+        }
+        const PI = freezeObj();
+        console.log(PI);
+
+Arrow Function:
+    anonymous function
+        var magic = function() {//function name may be written or may not be written
+        return new Date();
+        };
+    converting above to arrow function:
+        const magic = () => new Date(); // same as above but represented in arrow form and removing bracket as there is only one argument
+
+    Arrow function with parameter:
+        const myConcat = (arr1, arr2) => {
+            return arr1.concat(arr2);           // keeping return and bracket tho only one argument
+        };
+        console. log(myConcat([1, 2], [3, 4, 5]));
+
+    High Order Arrow function:
+        const realNumberArray = [4, 5.6, -9.8, 3.14, 42 , 8.34, -2]
+
+        const squareList = (arr) => {
+            const squaredIntegers = arr.filter(num => Number.isInteger && (num) > 0).map(x => x * x);
+            return squaredIntegers
+        };
+
+Function declaration
+
+Class
