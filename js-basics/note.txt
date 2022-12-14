@@ -345,3 +345,25 @@ Arrow Function:
 Function declaration
 
 Class
+
+Import and Export
+Import:
+//file1
+export const capitalizeString = str => str.toUpperCase();
+//next file 
+import { capitalizeString } from "./string_function"
+const cap = capitalizeString("hello!");
+console.log(cap);
+
+Export:
+const capitalizeString = (string) => {
+return string.charAt(0).toUpperCase() + string.slice(1);
+
+export { capitalizeString };
+
+
+export const foo = "bar";
+export const bar = "foo";
+
+//import everything
+import  * as object_name from "file_name"
